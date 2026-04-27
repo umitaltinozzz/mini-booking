@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# IDEs
+.vscode/
+.idea/
+
+# Cursor
+.agent/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Gizlenen Klasörler (Kullanıcı İsteği)
+newfrontend/
+backend/
+docs/
+
+# Mock Data
+frontend/src/data/mock*.ts
+frontend/src/data/demoData.ts
+frontend/src/data/dummy.ts
+
+# Markdown: yalnızca kök README.md repoda kalsın
+*.md
+!/README.md

@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FFFFFF;
+  --surface: #F8FAFC;
+  --surface2: #F1F5F9;
+  --text: #06080C;
+  --muted: #64748B;
+  --border: #E2E8F0;
+  --accent: #84CC16;
+  --accent2: #bef264;
+
+  --status-booked: #2563EB;
+  --status-booked2: #60A5FA;
+  --status-cancelled: #E11D48;
+  --status-warning: #D97706;
+  --status-disabled: #CBD5E1;
+
+  --background: var(--bg);
+  --foreground: var(--text);
+}
+
+.dark {
+  --bg: #06080C;
+  --surface: #0D121B;
+  --surface2: #111A28;
+  --text: #F1F5FF;
+  --muted: #A7B3C8;
+  --border: #21304A;
+  --accent: #A3E635;
+  --accent2: #D9FF7A;
+
+  --status-booked: #3B82F6;
+  --status-booked2: #76A9FF;
+  --status-cancelled: #F43F5E;
+  --status-warning: #F59E0B;
+  --status-disabled: #334155;
+}
+
+@theme inline {
+  --color-brand-bg: var(--bg);
+  --color-brand-surface: var(--surface);
+  --color-brand-surface2: var(--surface2);
+  --color-brand-text: var(--text);
+  --color-brand-muted: var(--muted);
+  --color-brand-border: var(--border);
+  --color-brand-accent: var(--accent);
+  --color-brand-accent2: var(--accent2);
+
+  --color-status-booked: var(--status-booked);
+  --color-status-booked2: var(--status-booked2);
+  --color-status-cancelled: var(--status-cancelled);
+  --color-status-warning: var(--status-warning);
+  --color-status-disabled: var(--status-disabled);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight text-brand-text;
+  }
+}
+
+.glass {
+  background: rgba(var(--surface), 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Marquee Animation for Logo Carousel */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Gradient Animation for Features */
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Glow Pulse Animation */
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(163, 230, 53, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(163, 230, 53, 0.4);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Aurora Animation for Aceternity UI */
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.animate-aurora {
+  animation: aurora 20s linear infinite;
+}
+
+/* Brand accent CSS variable for aurora */
+:root {
+  --brand-accent: #84CC16;
+  --transparent: transparent;
+}
+
+.dark {
+  --brand-accent: #A3E635;
+}
