@@ -24,6 +24,10 @@ Live demo: [https://minirandevu.up.railway.app](https://minirandevu.up.railway.a
 
 Default locale is Turkish under `/tr`. English pages are available under `/en`.
 
+## Project Status
+
+Active portfolio build / product prototype. The public repository focuses on the frontend product experience, booking flows, and dashboard structure; backend or commercial deployment work may remain private when needed.
+
 ## Features
 
 - **Multi-tenant booking flows** - Tenant-specific appointment pages and sector-aware demo experiences
